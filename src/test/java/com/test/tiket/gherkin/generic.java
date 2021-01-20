@@ -1,26 +1,13 @@
 package com.test.tiket.gherkin;
 
-import org.openqa.selenium.By;
+import com.test.tiket.element.basePage;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
-public class generic {
-
-    public static WebDriver driver;
+public class generic extends basePage {
 
     public static void runDriver() {
         driver = new ChromeDriver();
-    }
-
-    public static void waitfor(int sec) {
-        try {
-            TimeUnit.SECONDS.sleep(sec);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void scroll() {
@@ -31,13 +18,11 @@ public class generic {
     public static void login() {
         driver.get("https://tiket.com/login");
         waitfor(2);
-        driver.findElement(By.name("username")).sendKeys("tiketdotkom@yahoo.com");
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/div/div/div[3]/div[2]/div/div/div/div" +
-                "/div[1]/div[4]/button")).click();
+        driver.findElement(username).sendKeys("tiketdotkom@yahoo.com");
+        driver.findElement(btnLanjutkan).click();
         waitfor(1);
-        driver.findElement(By.name("password")).sendKeys("_Bismillah0-=_");
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/div/div/div[3]/div[2]/div/div/div/div/div" +
-                "/div[2]/div/form/div[4]/button")).click();
+        driver.findElement(password).sendKeys("_Bismillah0-=_");
+        driver.findElement(btnLogin).click();
     }
 
     public static void logout() {
