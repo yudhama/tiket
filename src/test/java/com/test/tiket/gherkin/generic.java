@@ -20,7 +20,7 @@ public class generic extends basePage {
         waitfor(2);
         driver.findElement(username).sendKeys("tiketdotkom@yahoo.com");
         driver.findElement(btnLanjutkan).click();
-        waitfor(1);
+        waitfor(2);
         driver.findElement(password).sendKeys("_Bismillah0-=_");
         driver.findElement(btnLogin).click();
     }

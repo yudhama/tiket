@@ -6,7 +6,7 @@ import java.security.PublicKey;
 
 public class flightPage {
     public static String urlFlight = "https://www.tiket.com/pesawat";
-    public static String price0, price1;
+    public static String price0, price1, cCal;
     public static By radioBtnRoundTrip = By.xpath("//*[@id='formhome']/div/div/div[1]/div[2]/div/div[2]");
     public static By txtAirport = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[2]/div[2]/div[2]" +
             "/div[1]/input");
@@ -14,10 +14,13 @@ public class flightPage {
     public static By sectionCalendar = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[4]/div[2]");
     //28jan2021
     public static By datePicker1 = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[4]/div[2]/div[2]" +
-            "/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table/tbody/tr[5]/td[5]/div");
+            "/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table/tbody/tr[1]/td[6]/div");
+    public static By startDate = By.xpath("//*[@class='widget-date-picker-today']//ancestor::div[1]");
+    public static By buttonNextCal = By.xpath("//*[@class='widget-date-prev-next']");
+
     //31jan2021
-    public static By datePicker2 = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[5]/div[2]/div[2]" +
-            "/div/div/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table/tbody/tr[6]/td[1]/div");
+    public static By endDate = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[5]/div[2]/div[2]/div/" +
+            "div/div[2]/div/div/div[1]/div[2]/div[2]/div/div[2]/div/table/tbody/tr[3]/td[3]");
     public static By btnSelesai = By.xpath("//*[@id='formhome']/div/div/div[1]/div[3]/div[6]/div[2]/div/" +
             "div/div[3]/button");
     public static By btnSearch = By.xpath("//*[@id='formhome']/div/div/div[1]/div[5]/button");
